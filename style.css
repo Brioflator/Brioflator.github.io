@@ -188,6 +188,7 @@ body {
     display: block;
     text-align: left;
   }
+
 }
 
 /* ----------------------------------------------------- */
@@ -206,11 +207,29 @@ html {
   flex-direction: column;
   height: 80vh;
   background-color: #363636;
-  /* width: 50vw; */
+
   padding-top: 60px;
   padding-right: 10vw;
   padding-left: 5vw;
 }
+@media screen and (max-width: 1775px) {
+#description
+{
+  width: 50vw;
+}
+.jucarie
+{
+  display: none;
+}
+
+.container
+{
+  display: none;
+}
+
+}
+
+
 
 .carmod {
   height: 90vh;
@@ -258,6 +277,45 @@ html {
   width: 30vw;
   height: 75vh;
 }
+
+@media screen and (max-width: 1080px) {
+  #description
+  {
+    width: 100%;
+  }
+  .jucarie
+  {
+    display: block;
+  }
+
+  .carmod_parent
+  {
+    display: none;
+  }
+  .ABOUT
+  {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .coolimg
+  {
+    height: auto;
+    width: 100%;
+  }
+
+  .about
+  {
+      margin: 0 auto;
+      width: 80%;
+  }
+
+  .container
+  {
+    display: none;
+  }
+
+  }
 
 /* ---------------------------------------------------------------------------------------------------- */
 .jucarie{
@@ -335,6 +393,20 @@ html {
       transform: scale(0.6) rotate(-45deg);
     }
   }
+
+@media screen and (max-width:600px) {
+  .jucarie
+  {
+    display: none;
+  }
+
+  .coolimg
+  {
+    height: 100%;
+    width: auto;
+  }
+  
+}
 
 /* ---------------------------------------------------------------------------------------------------------- */
 .container {
@@ -601,4 +673,28 @@ h3
   color: #b6babd;
   max-height:300px;
   max-width:390px;
+}
+
+/* ---------------------------------------------------------------------------------------------------------------- */
+
+.carmod_parent
+{
+  position: relative;
+}
+
+#parent {
+  height: 600px;
+  width: 600px;
+  position: absolute;
+  top: calc(50% - 350px);
+  right: 7%;
+}
+
+#parent model-viewer {
+  height: 600px;
+  width: 600px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: none;
 }

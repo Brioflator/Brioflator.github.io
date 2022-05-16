@@ -21,6 +21,11 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
 
+    <!--Imports a model-viewer JavaScript code -->
+    <!--It helps to handle how the 3D Object would be displayed -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+
     <style>
       canvas {
         display: block;
@@ -48,7 +53,7 @@
       </a>
     </div>
     <div class="overview" id="overview">
-      <div class="description">
+      <div class="description" id="description">
         <div class="heading1">
           <p >D</p>
           <p >e</p>
@@ -83,7 +88,12 @@
 
       </div>
       <div class="carmod_parent" style="width: 100%; height: auto">
-      <div class="carmod" id="parent"></div>
+      <div class="carmod" id="parent">
+         <!-- 3D objsect -->
+            <!-- This inserts the 3D object inside the aside container -->
+            <model-viewer src="scene.gltf" alt="Car" auto-rotate camera-controls ar ios-src="scene.gltf" exposure="3" loading="eager" minimumRenderScale="0.25" camera-orbit="0deg 75deg 100%">
+            </model-viewer>
+      </div>
     </div>
     </div>
     
@@ -278,7 +288,7 @@
           </svg></p>
       </div>
 
-    <script type="module">
+    <!-- <script type="module">
       import { GLTFLoader } from "./GLTFLoader.js";
 
       let scene = new THREE.Scene();
@@ -347,6 +357,6 @@
       }
 
       animate();
-    </script>
+    </script> -->
   </body>
 </html>
