@@ -82,8 +82,11 @@
         </div>
 
       </div>
+      <div class="carmod_parent" style="width: 100%; height: auto">
       <div class="carmod" id="parent"></div>
     </div>
+    </div>
+    
     <div class="ABOUT" id="about">
       <img class="coolimg" src="cool car 2.jpg" alt="" />
       <div class="about">
@@ -293,7 +296,9 @@
 
       let renderer = new THREE.WebGLRenderer({ antialias: true });
 
-      renderer.setSize(window.innerWidth / 2, window.innerHeight / 2);
+      window.addEventListener('resize', () => {setRendererSize(renderer)});
+      const setRendererSize = (renderer) => {renderer.setSize(window.innerWidth/2, (window.innerWidth/2) * 9 / 20);}
+      setRendererSize(renderer);
       document
         .getElementsByClassName("carmod")[0]
         .appendChild(renderer.domElement);

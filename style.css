@@ -209,7 +209,7 @@ html {
   /* width: 50vw; */
   padding-top: 60px;
   padding-right: 10vw;
-  padding-left: 10vw;
+  padding-left: 5vw;
 }
 
 .carmod {
@@ -245,8 +245,8 @@ html {
 .coolimg {
   /* margin-top: 10vh; */
   width: auto;
-  padding-left: 5vw;
-  padding-right: 10vw;
+  padding-left: 5vw; 
+  padding-right: 10vw; 
   padding-top: 15vh;
   height: 50vh;
 }
