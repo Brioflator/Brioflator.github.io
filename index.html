@@ -26,6 +26,8 @@
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
     <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/party-js@latest/bundle/party.min.js"></script>
+
     <style>
       canvas {
         display: block;
@@ -125,7 +127,7 @@
       </div>
       <div class="options">
         <button class="opt" onclick="tigaie()">Tigaie</button>
-        <button class="opt" onclick="softata()">Softata</button>
+        <button class="opt" onclick="softata()" onmousedown="party.confetti(this)">Softata</button>
       </div>
 
       <div class="tables">
@@ -233,7 +235,7 @@
 
             <div class="poz_fb">
               <button class="fb" type="button" data-previous>Previous</button>
-              <button class="fb" type="submit">Submit</button>
+              <button class="fb" type="submit" >Submit</button>
             </div>
             
 
